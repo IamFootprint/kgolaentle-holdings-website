@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-16">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <Image
@@ -34,6 +34,7 @@ export default function Footer() {
                 { href: "/services", label: "Services" },
                 { href: "/about", label: "About Us" },
                 { href: "/contact", label: "Contact" },
+                { href: "/faq", label: "FAQ" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -65,6 +66,29 @@ export default function Footer() {
                     className="text-gray-400 text-sm hover:text-accent transition-colors"
                   >
                     {service}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-white font-semibold text-sm tracking-wider uppercase mb-5">
+              Legal
+            </h4>
+            <ul className="space-y-3">
+              {[
+                { href: "/privacy", label: "Privacy Policy" },
+                { href: "/terms", label: "Terms of Use" },
+                { href: "/legal", label: "Legal Notice" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 text-sm hover:text-accent transition-colors"
+                  >
+                    {link.label}
                   </Link>
                 </li>
               ))}
