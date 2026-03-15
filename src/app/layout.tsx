@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kgolaentle Holdings | Your Community Deserves World-Class Service",
+  title: {
+    default: "Kgolaentle Holdings | Your Community Deserves World-Class Service",
+    template: "%s | Kgolaentle Holdings",
+  },
   description:
-    "Kgolaentle Holdings is a diversified enterprise in the Rustenburg region offering premium rentals, homeware, courier services, and fashion. Built on trust, innovation, and community.",
-  keywords: [
-    "Kgolaentle Holdings",
-    "Rustenburg",
-    "mobile rentals",
-    "courier services",
-    "homeware",
-    "fashion",
-    "Sun City",
-    "Mogwase",
-    "South Africa",
-  ],
+    "Kgolaentle Holdings is a diversified enterprise in the Rustenburg region offering premium rentals, homeware, courier services, and fashion.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -43,8 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-body text-[#1a1a1a] bg-warm-white antialiased">
-        {children}
+      <body className="text-[#1a1a1a] bg-warm-white antialiased">
+        <Navbar />
+        <main className="pt-20">{children}</main>
+        <Footer />
       </body>
     </html>
   );
