@@ -6,6 +6,15 @@ export type ActionResult =
   | { success: true }
   | { success: false; error: string };
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
 const serviceLabels: Record<string, string> = {
   rentals: "Kgolaentle Rentals",
   homeware: "Opulent Homeware",
@@ -29,8 +38,13 @@ export async function submitContactForm(
     return { success: false, error: "Email address is required." };
   }
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return { success: false, error: "Please enter a valid email address." };
+  }
+
   const name = [firstName, lastName].filter(Boolean).join(" ") || "Website visitor";
-  const serviceLabel = serviceLabels[service] ?? service ?? "Not specified";
+  const serviceLabel = serviceLabels[service] ?? "Not specified";
 
   // Dev fallback — no API key
   if (!process.env.RESEND_API_KEY) {
@@ -55,11 +69,11 @@ export async function submitContactForm(
       html: `
         <h2 style="font-family:sans-serif;color:#0f0f1a">New Website Enquiry</h2>
         <table style="font-family:sans-serif;border-collapse:collapse;width:100%;max-width:500px">
-          <tr><td style="padding:8px;font-weight:bold;color:#555">Name</td><td style="padding:8px">${name}</td></tr>
-          <tr style="background:#f9f9f9"><td style="padding:8px;font-weight:bold;color:#555">Email</td><td style="padding:8px"><a href="mailto:${email}">${email}</a></td></tr>
-          <tr><td style="padding:8px;font-weight:bold;color:#555">Phone</td><td style="padding:8px">${phone || "Not provided"}</td></tr>
-          <tr style="background:#f9f9f9"><td style="padding:8px;font-weight:bold;color:#555">Service</td><td style="padding:8px">${serviceLabel}</td></tr>
-          <tr><td style="padding:8px;font-weight:bold;color:#555">Message</td><td style="padding:8px">${message || "No message provided"}</td></tr>
+          <tr><td style="padding:8px;font-weight:bold;color:#555">Name</td><td style="padding:8px">${escapeHtml(name)}</td></tr>
+          <tr style="background:#f9f9f9"><td style="padding:8px;font-weight:bold;color:#555">Email</td><td style="padding:8px"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
+          <tr><td style="padding:8px;font-weight:bold;color:#555">Phone</td><td style="padding:8px">${escapeHtml(phone) || "Not provided"}</td></tr>
+          <tr style="background:#f9f9f9"><td style="padding:8px;font-weight:bold;color:#555">Service</td><td style="padding:8px">${escapeHtml(serviceLabel)}</td></tr>
+          <tr><td style="padding:8px;font-weight:bold;color:#555">Message</td><td style="padding:8px">${escapeHtml(message) || "No message provided"}</td></tr>
         </table>
         <p style="font-family:sans-serif;color:#9b1b30;margin-top:24px">Sent via kgolaentle.com contact form</p>
       `,
