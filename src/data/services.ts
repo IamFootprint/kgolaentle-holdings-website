@@ -25,7 +25,7 @@ export const services: Service[] = [
       "Professional setup and maintenance",
     ],
     cta: "Book a Rental",
-    href: "https://www.facebook.com/KgolalentleHoldings/",
+    href: "https://www.facebook.com/KgolaentleHoldings/",
     accent: "from-primary to-primary-dark",
   },
   {
