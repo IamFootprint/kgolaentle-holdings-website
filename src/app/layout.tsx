@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
+export const metadataBase = new URL("https://www.kgolaentle.com");
+
 export const metadata: Metadata = {
   title: {
     default: "Kgolaentle Holdings | Your Community Deserves World-Class Service",
