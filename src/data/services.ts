@@ -32,7 +32,7 @@ export const services: Service[] = [
   },
   {
     slug: "courier",
-    name: "Courier Franchise",
+    name: "Courier Services",
     image: "/images/service-courier.jpg",
     tagline: "Your community deserves deliveries you can count on",
     description:
