@@ -2,7 +2,67 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { services } from "@/data/services";
+import { services, type Service } from "@/data/services";
+
+function ServiceCTA({ service }: { service: Service }) {
+  if (service.serviceType === "rentals") {
+    return (
+      <div className="bg-secondary text-white rounded-2xl p-8">
+        <h3 className="font-display text-xl font-semibold mb-3">Get a Rental Quote</h3>
+        <p className="text-gray-300 text-sm mb-6">Tell us about your event and we&apos;ll put together a package for you.</p>
+        <Link href="/contact?service=rentals" className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors mb-3">
+          Get a Quote
+        </Link>
+        <a href="https://wa.me/27870937316?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20rentals" target="_blank" rel="noopener noreferrer"
+          className="block w-full text-center border border-white/20 hover:border-gold text-gray-300 hover:text-gold py-3 px-6 rounded-lg font-medium transition-colors">
+          WhatsApp Us
+        </a>
+      </div>
+    );
+  }
+  if (service.serviceType === "courier") {
+    return (
+      <div className="bg-secondary text-white rounded-2xl p-8">
+        <h3 className="font-display text-xl font-semibold mb-3">Courier Enquiries</h3>
+        <p className="text-gray-300 text-sm mb-6">Reach out to our team for delivery coverage, rates, and scheduling in the Rustenburg region.</p>
+        <Link href="/contact?service=courier" className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors mb-3">
+          Contact Us
+        </Link>
+        <a href="https://wa.me/27870937316?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20courier%20services" target="_blank" rel="noopener noreferrer"
+          className="block w-full text-center border border-white/20 hover:border-gold text-gray-300 hover:text-gold py-3 px-6 rounded-lg font-medium transition-colors">
+          WhatsApp Us
+        </a>
+      </div>
+    );
+  }
+  if (service.serviceType === "technology") {
+    return (
+      <div className="bg-secondary text-white rounded-2xl p-8">
+        <h3 className="font-display text-xl font-semibold mb-3">Book a Consultation</h3>
+        <p className="text-gray-300 text-sm mb-6">Discuss your technology challenges with us. We work with founders, operators, and enterprise teams to deliver real outcomes.</p>
+        <Link href="/contact?service=technology" className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors">
+          Book a Consultation
+        </Link>
+      </div>
+    );
+  }
+  if (service.serviceType === "beauty") {
+    return (
+      <div className="bg-secondary text-white rounded-2xl p-8">
+        <h3 className="font-display text-xl font-semibold mb-3">Visit Opulent Beauty</h3>
+        <p className="text-gray-300 text-sm mb-6">Experience Opulent Beauty for yourself — premium services in a welcoming, professional environment.</p>
+        <a href="https://opulentbeauty.co.za" target="_blank" rel="noopener noreferrer"
+          className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors mb-3">
+          Visit Opulent Beauty
+        </a>
+        <Link href="/contact" className="block w-full text-center border border-white/20 hover:border-gold text-gray-300 hover:text-gold py-3 px-6 rounded-lg font-medium transition-colors">
+          Get in Touch
+        </Link>
+      </div>
+    );
+  }
+  return null;
+}
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -157,20 +217,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
             {/* Sidebar */}
             <div className="space-y-6">
-              <div className="bg-warm-gray rounded-2xl p-6">
-                <h3 className="font-heading font-bold text-secondary text-lg mb-3">
-                  Need a quote?
-                </h3>
-                <p className="text-gray-500 text-sm mb-5">
-                  We&apos;ll get back to you within 24 hours.
-                </p>
-                <Link
-                  href="/contact"
-                  className="block text-center px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-all text-sm"
-                >
-                  Get a Free Quote
-                </Link>
-              </div>
+              <ServiceCTA service={service} />
 
               <div className="bg-warm-gray rounded-2xl p-6">
                 <h3 className="font-heading font-bold text-secondary text-lg mb-4">
