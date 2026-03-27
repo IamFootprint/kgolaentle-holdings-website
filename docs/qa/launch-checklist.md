@@ -11,9 +11,9 @@
 - [ ] / (Home) loads with hero image
 - [ ] /services loads, all 4 service cards visible
 - [ ] /services/rentals loads correctly
-- [ ] /services/homeware loads correctly
 - [ ] /services/courier loads correctly
-- [ ] /services/collections loads correctly
+- [ ] /services/technology loads correctly
+- [ ] /services/beauty loads correctly
 - [ ] /about loads with team section
 - [ ] /contact loads with form and contact info
 - [ ] /faq loads with accordion
@@ -38,7 +38,7 @@
 - [ ] WhatsApp link (wa.me/27870937316) opens correctly
 - [ ] Facebook link opens in new tab
 - [ ] Instagram link opens in new tab
-- [ ] opulenthomeware.com link opens in new tab
+- [ ] opulentbeauty.co.za link opens in new tab
 
 ## Responsive
 - [ ] Mobile (375px) — homepage, services, contact

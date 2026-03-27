@@ -38,6 +38,18 @@ Before go-live, verify `kgolaentle.com` in Resend:
    ```
 4. Redeploy
 
+## Service Pre-population
+
+The contact form accepts a `service` query param (e.g. `/contact?service=rentals`) that pre-selects the correct dropdown option. The `serviceLabels` map used by the form:
+
+```
+rentals: "Kgolaentle Rentals"
+courier: "Courier Services"
+technology: "Technology Solutions"
+beauty: "Opulent Beauty"
+other: "General Inquiry"
+```
+
 ## Testing
 Manually: fill out the form at /contact. Check that:
 - Submit button shows "Sending…" while pending

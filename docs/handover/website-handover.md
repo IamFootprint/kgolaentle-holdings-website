@@ -9,7 +9,7 @@
 ## What Was Built
 
 A complete holdings marketing website migrated from Wix to Next.js 16 + Vercel, with:
-- 12 pages: Home, Services overview, 4 service detail pages, About, Contact, FAQ, Privacy, Terms, Legal
+- 12 pages: Home, Services overview, 4 service detail pages (Rentals, Courier, Technology, Beauty), About, Contact, FAQ, Privacy, Terms, Legal
 - Working contact form backed by Resend (email to info@kgolaentle.com)
 - Mobile-first responsive design
 - Premium brand identity (Playfair Display + DM Sans, deep red + gold palette)
@@ -61,6 +61,7 @@ All content is in TypeScript source files:
 | Variable | Where | Purpose |
 |----------|-------|---------|
 | `RESEND_API_KEY` | Vercel env + `.env.local` | Contact form email delivery |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Vercel env + `.env.local` | Google Analytics 4 tracking |
 
 To add/update:
 ```bash
