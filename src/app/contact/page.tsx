@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -150,102 +151,7 @@ export default function ContactPage() {
 
             {/* Form Column */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100">
-                <h2 className="text-2xl font-heading font-bold text-secondary mb-2">
-                  Get a Free Quote
-                </h2>
-                <p className="text-gray-500 text-sm mb-8">
-                  Fill in the form and we&apos;ll get back to you within 24 hours.
-                </p>
-                <form className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-secondary mb-1.5">
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px]"
-                        placeholder="Your first name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-secondary mb-1.5">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px]"
-                        placeholder="Your last name"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-secondary mb-1.5">
-                      Email <span className="text-primary">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px]"
-                      placeholder="you@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-secondary mb-1.5">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px]"
-                      placeholder="+27..."
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-secondary mb-1.5">
-                      Service Interested In
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px] text-gray-600"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="rentals">Kgolaentle Rentals</option>
-                      <option value="homeware">Opulent Homeware</option>
-                      <option value="courier">Courier Services</option>
-                      <option value="collections">Kgolaentle Collections</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-secondary mb-1.5">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px] resize-none"
-                      placeholder="Tell us about your needs..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-all hover:shadow-lg hover:shadow-primary/25 text-[15px]"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
