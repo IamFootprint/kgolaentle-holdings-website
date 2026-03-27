@@ -95,14 +95,14 @@ export default function AboutPage() {
                   exceptional services that cater to a diverse range of needs.
                 </p>
                 <p>
-                  Our portfolios include <strong className="text-secondary">Rental Solutions</strong>,
+                  Our portfolios include <strong className="text-secondary">Kgolaentle Rentals</strong>,
                   offering top-of-the-line equipment rentals for events;{" "}
-                  <strong className="text-secondary">Opulent Homeware</strong>, an online store
-                  providing exquisite homeware products;{" "}
-                  <strong className="text-secondary">Courier Franchise</strong> serving the
-                  Rustenburg Region; and{" "}
-                  <strong className="text-secondary">Kgolaentle Collections</strong>, our exclusive
-                  fashion line.
+                  <strong className="text-secondary">Courier Services</strong> serving the
+                  Rustenburg Region;{" "}
+                  <strong className="text-secondary">Technology Solutions</strong>, delivering
+                  innovative tech services to businesses and individuals; and{" "}
+                  <strong className="text-secondary">Opulent Beauty</strong>, our premium beauty
+                  brand.
                 </p>
                 <p>
                   We take pride in consistently exceeding customer expectations and

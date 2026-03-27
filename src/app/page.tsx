@@ -41,7 +41,7 @@ export default function Home() {
               service
             </h1>
             <p className="animate-fade-in-up animate-delay-200 text-lg md:text-xl text-gray-300 max-w-lg mb-10 leading-relaxed">
-              From rentals to fashion, courier to homeware — excellence and
+              From rentals to technology, courier to beauty — excellence and
               innovation, right where you are.
             </p>
             <div className="animate-fade-in-up animate-delay-300 flex flex-col sm:flex-row gap-4">
@@ -234,8 +234,8 @@ export default function Home() {
             <em className="not-italic text-accent">Kgolaentle</em> difference?
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto mb-10">
-            Whether it&apos;s an event, a delivery, or elevating your home — we&apos;re
-            here to serve you with excellence.
+            Whether it&apos;s an event, a delivery, a tech solution, or a beauty
+            experience — we&apos;re here to serve you with excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

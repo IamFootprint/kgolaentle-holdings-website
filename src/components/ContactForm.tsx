@@ -135,10 +135,10 @@ export default function ContactForm() {
           >
             <option value="">Select a service</option>
             <option value="rentals">Kgolaentle Rentals</option>
-            <option value="homeware">Opulent Homeware</option>
             <option value="courier">Courier Services</option>
-            <option value="collections">Kgolaentle Collections</option>
-            <option value="other">Other</option>
+            <option value="technology">Technology Solutions</option>
+            <option value="beauty">Opulent Beauty</option>
+            <option value="other">General Inquiry</option>
           </select>
         </div>
 
