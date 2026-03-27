@@ -17,10 +17,10 @@ function escapeHtml(str: string): string {
 
 const serviceLabels: Record<string, string> = {
   rentals: "Kgolaentle Rentals",
-  homeware: "Opulent Homeware",
   courier: "Courier Services",
-  collections: "Kgolaentle Collections",
-  other: "Other",
+  technology: "Technology Solutions",
+  beauty: "Opulent Beauty",
+  other: "General Inquiry",
 };
 
 export async function submitContactForm(

@@ -8,6 +8,7 @@ export type Service = {
   cta: string;
   href: string;
   accent: string;
+  serviceType: "rentals" | "courier" | "technology" | "beauty";
 };
 
 export const services: Service[] = [
@@ -24,26 +25,10 @@ export const services: Service[] = [
       "Customizable packages for any budget",
       "Professional setup and maintenance",
     ],
-    cta: "Book a Rental",
-    href: "https://www.facebook.com/KgolaentleHoldings/",
+    cta: "Get a Quote",
+    href: "/contact?service=rentals",
     accent: "from-primary to-primary-dark",
-  },
-  {
-    slug: "homeware",
-    name: "Opulent Homeware",
-    image: "/images/service-homeware.jpg",
-    tagline: "Your home should reflect who you are",
-    description:
-      "A curated online store featuring exquisite homeware products designed to elevate the aesthetics and functionality of your living spaces. From elegant dinnerware to luxurious bedding and unique accessories.",
-    features: [
-      "Curated premium collections",
-      "Elegant dinnerware & bedding",
-      "Unique home accessories",
-      "Convenient online shopping",
-    ],
-    cta: "Shop Now",
-    href: "https://www.opulenthomeware.com",
-    accent: "from-accent to-accent-light",
+    serviceType: "rentals",
   },
   {
     slug: "courier",
@@ -58,25 +43,45 @@ export const services: Service[] = [
       "Professional trained drivers",
       "Timely communication & updates",
     ],
-    cta: "Send a Package",
-    href: "/contact",
+    cta: "Contact Us",
+    href: "/contact?service=courier",
     accent: "from-secondary to-gray-800",
+    serviceType: "courier",
   },
   {
-    slug: "collections",
-    name: "Kgolaentle Collections",
-    image: "/images/service-collections.jpg",
-    tagline: "Fashion that tells your story",
+    slug: "technology",
+    name: "Technology Solutions",
+    image: "/images/service-technology.jpg",
+    tagline: "Strategy, systems, and execution — built for the real world",
     description:
-      "Our exclusive fashion line blends timeless elegance with contemporary African design. Collaborating with skilled artisans, we ensure exceptional craftsmanship in every piece.",
+      "We help founders, operators, and enterprise teams design, build, and deploy digital platforms that work. From product strategy and architecture to AI-enabled workflows and full-stack delivery, we bring clarity and execution to complex technology problems.",
     features: [
-      "Contemporary African design",
-      "Skilled artisan craftsmanship",
-      "Casual and formal collections",
-      "Unique statement pieces",
+      "Digital platform design and product strategy",
+      "Web and mobile application delivery",
+      "AI-enabled workflows and automation",
+      "Enterprise architecture and technology leadership",
     ],
-    cta: "Explore Collection",
-    href: "https://www.facebook.com/KgolaentleCollections/",
-    accent: "from-purple-600 to-pink-500",
+    cta: "Book a Consultation",
+    href: "/contact?service=technology",
+    accent: "from-blue-700 to-blue-900",
+    serviceType: "technology",
+  },
+  {
+    slug: "beauty",
+    name: "Opulent Beauty",
+    image: "/images/service-beauty.jpg",
+    tagline: "Curated beauty experiences, crafted with care",
+    description:
+      "Opulent Beauty brings together premium beauty services and products in an environment designed for those who appreciate quality. Whether you are treating yourself or someone special, we deliver an elevated beauty experience.",
+    features: [
+      "Premium beauty services and treatments",
+      "Curated beauty products",
+      "Professional and welcoming environment",
+      "Visit us at Opulent Beauty",
+    ],
+    cta: "Visit Opulent Beauty",
+    href: "https://opulentbeauty.co.za",
+    accent: "from-rose-600 to-pink-700",
+    serviceType: "beauty",
   },
 ];
