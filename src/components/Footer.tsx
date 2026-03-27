@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { services } from "@/data/services";
 
 export default function Footer() {
   return (
@@ -54,12 +55,7 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-3">
-              {[
-                { name: "Kgolaentle Rentals", slug: "rentals" },
-                { name: "Opulent Homeware", slug: "homeware" },
-                { name: "Courier Franchise", slug: "courier" },
-                { name: "Kgolaentle Collections", slug: "collections" },
-              ].map((service) => (
+              {services.map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
