@@ -55,17 +55,17 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                "Kgolaentle Rentals",
-                "Opulent Homeware",
-                "Courier Franchise",
-                "Kgolaentle Collections",
+                { name: "Kgolaentle Rentals", slug: "rentals" },
+                { name: "Opulent Homeware", slug: "homeware" },
+                { name: "Courier Franchise", slug: "courier" },
+                { name: "Kgolaentle Collections", slug: "collections" },
               ].map((service) => (
-                <li key={service}>
+                <li key={service.slug}>
                   <Link
-                    href="/services"
+                    href={`/services/${service.slug}`}
                     className="text-gray-400 text-sm hover:text-accent transition-colors"
                   >
-                    {service}
+                    {service.name}
                   </Link>
                 </li>
               ))}

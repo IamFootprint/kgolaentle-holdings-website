@@ -1,36 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { services as allServices } from "@/data/services";
 
-const services = [
-  {
-    name: "Kgolaentle Rentals",
-    image: "/images/service-rentals.jpg",
-    description:
-      "Premium VIP mobile toilets and freezers for events that deserve the extraordinary.",
-    href: "/services",
-  },
-  {
-    name: "Opulent Homeware",
-    image: "/images/service-homeware.jpg",
-    description:
-      "Curated homeware that transforms living spaces into reflections of who you are.",
-    href: "/services",
-  },
-  {
-    name: "Courier Franchise",
-    image: "/images/service-courier.jpg",
-    description:
-      "Reliable deliveries across the Rustenburg region — Sun City, Mogwase, Ledig and beyond.",
-    href: "/services",
-  },
-  {
-    name: "Kgolaentle Collections",
-    image: "/images/service-collections.jpg",
-    description:
-      "Fashion that blends timeless elegance with contemporary African design.",
-    href: "/services",
-  },
-];
+const services = allServices.map((s) => ({
+  name: s.name,
+  image: s.image,
+  description: s.description,
+  href: `/services/${s.slug}`,
+}));
 
 export default function Home() {
   return (
