@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     siteName: "Kgolaentle Holdings",
     locale: "en_ZA",
     type: "website",
+    images: [
+      {
+        url: "https://www.kgolaentle.com/images/hero-serving-lunch.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Kgolaentle Holdings team member delivering service",
+      },
+    ],
   },
 };
 
