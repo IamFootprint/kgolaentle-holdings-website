@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Analytics from "@/components/Analytics";
 import "./globals.css";
 
 export const metadataBase = new URL("https://www.kgolaentle.com");
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-20">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
