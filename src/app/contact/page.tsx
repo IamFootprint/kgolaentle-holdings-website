@@ -82,32 +82,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Hours */}
-              <div className="flex gap-5">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-heading font-bold text-secondary text-lg mb-1">Opening Hours</h3>
-                  <div className="text-gray-500 space-y-1 text-[15px]">
-                    <div className="flex justify-between gap-8">
-                      <span>Monday – Friday</span>
-                      <span className="font-medium text-secondary">8:00 – 18:00</span>
-                    </div>
-                    <div className="flex justify-between gap-8">
-                      <span>Saturday</span>
-                      <span className="font-medium text-secondary">9:00 – 14:00</span>
-                    </div>
-                    <div className="flex justify-between gap-8">
-                      <span>Sunday</span>
-                      <span className="font-medium text-secondary">Closed</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               {/* Social */}
               <div>
                 <h3 className="font-heading font-bold text-secondary text-lg mb-4">Follow Us</h3>

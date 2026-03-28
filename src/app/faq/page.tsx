@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "What are your operating hours?",
     answer:
-      "Our office operates Monday to Friday from 08:00 to 18:00, and Saturday from 09:00 to 14:00. We are closed on Sundays and public holidays. Rental deliveries and collections for events may be arranged outside of standard hours by prior agreement.",
+      "We aim to respond to all enquiries within 24 hours. Rental deliveries and collections for events may be arranged outside of standard business hours by prior agreement. Contact us at info@kgolaentle.com or +27 (0) 87 093 7316 to discuss your requirements.",
   },
   {
     question: "How do I get a quote?",
