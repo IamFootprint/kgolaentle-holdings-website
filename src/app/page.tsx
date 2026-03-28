@@ -104,16 +104,14 @@ export default function Home() {
                 <br />not just business
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                <strong className="text-secondary">Kgolaentle</strong> — meaning
-                &ldquo;beautiful&rdquo; in Setswana — was born from a conviction
-                that the Rustenburg region deserves services that match its spirit:
-                vibrant, resilient, and world-class.
+                <strong className="text-secondary">Kgolaentle</strong> was founded
+                on the belief that our country deserves services that reflect its
+                spirit — vibrant, resilient, and world-class.
               </p>
               <p className="text-gray-500 leading-relaxed mb-10">
-                Founded by Masego Mafoko with over a decade of experience in
-                Communications and Marketing, we don&apos;t just deliver services —
-                we invest in the dignity of every interaction, every delivery, every
-                event we touch.
+                For over a decade, we have gone beyond service delivery by bringing
+                care, professionalism, and dignity to every interaction, every
+                delivery, and every event we touch.
               </p>
 
               {/* Values */}
