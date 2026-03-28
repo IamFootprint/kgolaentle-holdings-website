@@ -34,6 +34,16 @@ export async function submitContactForm(
   const service = (formData.get("service") as string | null) ?? "";
   const message = (formData.get("message") as string | null) ?? "";
 
+  // Honeypot — bots fill this, humans don't
+  const honeypot = (formData.get("website") as string | null) ?? "";
+  if (honeypot.trim()) {
+    return { success: true };
+  }
+
+  if (!firstName.trim() && !lastName.trim()) {
+    return { success: false, error: "Please enter your name." };
+  }
+
   if (!email.trim()) {
     return { success: false, error: "Email address is required." };
   }
@@ -43,7 +53,11 @@ export async function submitContactForm(
     return { success: false, error: "Please enter a valid email address." };
   }
 
-  const name = [firstName, lastName].filter(Boolean).join(" ") || "Website visitor";
+  if (!message.trim()) {
+    return { success: false, error: "Please include a message." };
+  }
+
+  const name = [firstName, lastName].filter(Boolean).join(" ");
   const serviceLabel = serviceLabels[service] ?? "Not specified";
 
   // Dev fallback — no API key
@@ -62,7 +76,7 @@ export async function submitContactForm(
 
   try {
     await resend.emails.send({
-      from: "Kgolaentle Holdings <onboarding@resend.dev>",
+      from: "Kgolaentle Holdings <noreply@kgolaentle.com>",
       to: ["info@kgolaentle.com"],
       replyTo: email,
       subject: `Website Enquiry — ${serviceLabel}`,

@@ -125,7 +125,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/KgolalentleHoldings"
+                href="https://www.facebook.com/KgolaentleHoldings"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 text-gray-400 flex items-center justify-center hover:bg-accent hover:text-secondary transition-all"

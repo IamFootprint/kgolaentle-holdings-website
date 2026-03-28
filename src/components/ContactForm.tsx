@@ -1,11 +1,16 @@
 "use client";
 
-import { useActionState } from "react";
+import Link from "next/link";
+import { Suspense, useActionState } from "react";
+import { useSearchParams } from "next/navigation";
 import { submitContactForm, type ActionResult } from "@/app/contact/actions";
 
 const initialState: ActionResult | null = null;
 
-export default function ContactForm() {
+function ContactFormContent() {
+  const searchParams = useSearchParams();
+  const defaultService = searchParams.get("service") ?? "";
+
   const [state, formAction, isPending] = useActionState(
     submitContactForm,
     initialState
@@ -32,9 +37,15 @@ export default function ContactForm() {
         <h3 className="text-2xl font-heading font-bold text-secondary mb-3">
           Message Sent!
         </h3>
-        <p className="text-gray-500">
+        <p className="text-gray-500 mb-8">
           We&apos;ll get back to you within 24 hours.
         </p>
+        <Link
+          href="/contact"
+          className="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all text-sm"
+        >
+          Send another message
+        </Link>
       </div>
     );
   }
@@ -55,18 +66,25 @@ export default function ContactForm() {
       )}
 
       <form action={formAction} className="space-y-5">
+        {/* Honeypot — hidden from real users, filled by bots */}
+        <div className="absolute opacity-0 pointer-events-none -z-10 w-0 h-0 overflow-hidden" aria-hidden="true">
+          <input type="text" name="website" autoComplete="off" tabIndex={-1} />
+        </div>
+
         <div className="grid sm:grid-cols-2 gap-5">
           <div>
             <label
               htmlFor="firstName"
               className="block text-sm font-medium text-secondary mb-1.5"
             >
-              First Name
+              First Name <span className="text-primary">*</span>
             </label>
             <input
               type="text"
               id="firstName"
               name="firstName"
+              required
+              autoComplete="given-name"
               className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px]"
               placeholder="Your first name"
             />
@@ -82,6 +100,7 @@ export default function ContactForm() {
               type="text"
               id="lastName"
               name="lastName"
+              autoComplete="family-name"
               className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px]"
               placeholder="Your last name"
             />
@@ -100,6 +119,7 @@ export default function ContactForm() {
             id="email"
             name="email"
             required
+            autoComplete="email"
             className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px]"
             placeholder="you@example.com"
           />
@@ -116,6 +136,7 @@ export default function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
+            autoComplete="tel"
             className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px]"
             placeholder="+27..."
           />
@@ -131,6 +152,7 @@ export default function ContactForm() {
           <select
             id="service"
             name="service"
+            defaultValue={defaultService}
             className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px] text-gray-600"
           >
             <option value="">Select a service</option>
@@ -147,12 +169,14 @@ export default function ContactForm() {
             htmlFor="message"
             className="block text-sm font-medium text-secondary mb-1.5"
           >
-            Message
+            Message <span className="text-primary">*</span>
           </label>
           <textarea
             id="message"
             name="message"
             rows={5}
+            required
+            autoComplete="off"
             className="w-full px-4 py-3 bg-warm-gray border-0 rounded-xl focus:ring-2 focus:ring-primary/20 outline-none transition-all text-[15px] resize-none"
             placeholder="Tell us about your needs..."
           />
@@ -167,5 +191,17 @@ export default function ContactForm() {
         </button>
       </form>
     </div>
+  );
+}
+
+export default function ContactForm() {
+  return (
+    <Suspense
+      fallback={
+        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100 min-h-[500px] animate-pulse" />
+      }
+    >
+      <ContactFormContent />
+    </Suspense>
   );
 }

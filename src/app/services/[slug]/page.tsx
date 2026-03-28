@@ -8,13 +8,13 @@ function ServiceCTA({ service }: { service: Service }) {
   if (service.serviceType === "rentals") {
     return (
       <div className="bg-secondary text-white rounded-2xl p-8">
-        <h3 className="font-display text-xl font-semibold mb-3">Get a Rental Quote</h3>
+        <h3 className="font-heading text-xl font-semibold mb-3">Get a Rental Quote</h3>
         <p className="text-gray-300 text-sm mb-6">Tell us about your event and we&apos;ll put together a package for you.</p>
         <Link href="/contact?service=rentals" className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors mb-3">
           Get a Quote
         </Link>
         <a href="https://wa.me/27870937316?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20rentals" target="_blank" rel="noopener noreferrer"
-          className="block w-full text-center border border-white/20 hover:border-gold text-gray-300 hover:text-gold py-3 px-6 rounded-lg font-medium transition-colors">
+          className="block w-full text-center border border-white/20 hover:border-accent text-gray-300 hover:text-accent py-3 px-6 rounded-lg font-medium transition-colors">
           WhatsApp Us
         </a>
       </div>
@@ -23,13 +23,13 @@ function ServiceCTA({ service }: { service: Service }) {
   if (service.serviceType === "courier") {
     return (
       <div className="bg-secondary text-white rounded-2xl p-8">
-        <h3 className="font-display text-xl font-semibold mb-3">Courier Enquiries</h3>
+        <h3 className="font-heading text-xl font-semibold mb-3">Courier Enquiries</h3>
         <p className="text-gray-300 text-sm mb-6">Reach out to our team for delivery coverage, rates, and scheduling in the Rustenburg region.</p>
         <Link href="/contact?service=courier" className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors mb-3">
           Contact Us
         </Link>
         <a href="https://wa.me/27870937316?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20courier%20services" target="_blank" rel="noopener noreferrer"
-          className="block w-full text-center border border-white/20 hover:border-gold text-gray-300 hover:text-gold py-3 px-6 rounded-lg font-medium transition-colors">
+          className="block w-full text-center border border-white/20 hover:border-accent text-gray-300 hover:text-accent py-3 px-6 rounded-lg font-medium transition-colors">
           WhatsApp Us
         </a>
       </div>
@@ -38,7 +38,7 @@ function ServiceCTA({ service }: { service: Service }) {
   if (service.serviceType === "technology") {
     return (
       <div className="bg-secondary text-white rounded-2xl p-8">
-        <h3 className="font-display text-xl font-semibold mb-3">Book a Consultation</h3>
+        <h3 className="font-heading text-xl font-semibold mb-3">Book a Consultation</h3>
         <p className="text-gray-300 text-sm mb-6">Discuss your technology challenges with us. We work with founders, operators, and enterprise teams to deliver real outcomes.</p>
         <Link href="/contact?service=technology" className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors">
           Book a Consultation
@@ -49,13 +49,13 @@ function ServiceCTA({ service }: { service: Service }) {
   if (service.serviceType === "beauty") {
     return (
       <div className="bg-secondary text-white rounded-2xl p-8">
-        <h3 className="font-display text-xl font-semibold mb-3">Visit Opulent Beauty</h3>
+        <h3 className="font-heading text-xl font-semibold mb-3">Visit Opulent Beauty</h3>
         <p className="text-gray-300 text-sm mb-6">Experience Opulent Beauty for yourself — premium services in a welcoming, professional environment.</p>
         <a href="https://opulentbeauty.co.za" target="_blank" rel="noopener noreferrer"
           className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors mb-3">
           Visit Opulent Beauty
         </a>
-        <Link href="/contact" className="block w-full text-center border border-white/20 hover:border-gold text-gray-300 hover:text-gold py-3 px-6 rounded-lg font-medium transition-colors">
+        <Link href="/contact" className="block w-full text-center border border-white/20 hover:border-accent text-gray-300 hover:text-accent py-3 px-6 rounded-lg font-medium transition-colors">
           Get in Touch
         </Link>
       </div>
@@ -220,6 +220,25 @@ export default async function ServiceDetailPage({ params }: Props) {
             {/* Sidebar */}
             <div className="space-y-6">
               <ServiceCTA service={service} />
+
+              <div className="bg-accent/10 border border-accent/20 rounded-2xl p-6">
+                <h3 className="font-heading font-bold text-secondary text-lg mb-2">
+                  Have questions?
+                </h3>
+                <p className="text-gray-500 text-sm mb-4 leading-relaxed">
+                  Browse our FAQ for answers about bookings, delivery areas,
+                  pricing, and more.
+                </p>
+                <Link
+                  href="/faq"
+                  className="inline-flex items-center text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
+                >
+                  View FAQ
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
 
               <div className="bg-warm-gray rounded-2xl p-6">
                 <h3 className="font-heading font-bold text-secondary text-lg mb-4">

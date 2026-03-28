@@ -38,9 +38,9 @@ export const services: Service[] = [
     description:
       "Licensed to serve the Rustenburg Region, our courier franchise delivers reliable and efficient services across Sun City, Ledig, Mogwase, Hartebeesfontein, Moruleng and surrounding areas.",
     features: [
-      "Reliable regional delivery network",
+      "Deep community knowledge across Sun City, Ledig, Mogwase, Hartebeesfontein, Moruleng",
       "Online tracking system",
-      "Professional trained drivers",
+      "Professionally trained drivers",
       "Timely communication & updates",
     ],
     cta: "Contact Us",

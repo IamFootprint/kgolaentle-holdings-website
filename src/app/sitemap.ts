@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { services } from "@/data/services";
 
 const baseUrl = "https://www.kgolaentle.com";
 
@@ -54,13 +55,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const serviceRoutes: MetadataRoute.Sitemap = [
-    "rentals",
-    "homeware",
-    "courier",
-    "collections",
-  ].map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
+  const serviceRoutes: MetadataRoute.Sitemap = services.map((service) => ({
+    url: `${baseUrl}/services/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.85,

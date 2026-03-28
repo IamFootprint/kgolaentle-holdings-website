@@ -124,7 +124,7 @@ export default function ContactPage() {
                     </svg>
                   </a>
                   <a
-                    href="https://www.facebook.com/KgolalentleHoldings"
+                    href="https://www.facebook.com/KgolaentleHoldings"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-all hover:scale-110"

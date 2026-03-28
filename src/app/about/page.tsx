@@ -18,7 +18,7 @@ const team = [
     name: "Thabang Moreo",
     role: "Courier Services",
     image: "/images/team-courier.png",
-    bio: "Renowned for exceptional service, Thabang has become a trusted figure among our clientele. His professionalism and punctuality are driven by his personal motto:",
+    bio: "Renowned for exceptional service, Thabang has become a trusted figure among our clientele. His professionalism and punctuality make him a linchpin of our delivery operations.",
     motto: "Every package is a promise, and it's my job to fulfill it.",
     featured: false,
   },
@@ -35,7 +35,7 @@ const team = [
     role: "Mobile Units Caretaker",
     image: "/images/team-kagiso-modise.png",
     bio: "Known as KG, his keen eye for detail and steadfast commitment to maintaining the highest standards ensure all mobile units are pristine and fully functional.",
-    motto: "Every unit is a reflection of our service.",
+    motto: "Clean units, clear conscience — that's the standard I hold myself to.",
     featured: false,
   },
 ];
@@ -89,10 +89,10 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-5 text-gray-600 leading-relaxed">
                 <p>
-                  Kgolaentle Holdings is dedicated to delivering quality, innovation,
-                  and customer satisfaction across its varied business portfolios.
-                  With a strong commitment to excellence, we strive to provide
-                  exceptional services that cater to a diverse range of needs.
+                  Kgolaentle was born from a simple observation: the communities of
+                  the Rustenburg region deserved the same standard of service as
+                  anywhere else in the country — professional, reliable, and dignified.
+                  Masego Mafoko built the company to close that gap, portfolio by portfolio.
                 </p>
                 <p>
                   Our portfolios include <strong className="text-secondary">Kgolaentle Rentals</strong>,
@@ -275,8 +275,8 @@ export default function AboutPage() {
             Want to work with us?
           </h2>
           <p className="text-gray-500 text-lg mb-8">
-            We&apos;re always looking to serve our community better.
-            Reach out and let&apos;s talk.
+            Ready to work with us? Tell us about your event, delivery, or project.
+            We&apos;ll respond within 24 hours.
           </p>
           <Link
             href="/contact"

@@ -9,6 +9,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -37,13 +38,13 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`relative px-4 py-2 text-[15px] font-medium tracking-wide transition-colors ${
-                  pathname === link.href
+                  (link.href === "/" ? pathname === "/" : pathname.startsWith(link.href))
                     ? "text-primary"
                     : "text-gray-500 hover:text-secondary"
                 }`}
               >
                 {link.label}
-                {pathname === link.href && (
+                {(link.href === "/" ? pathname === "/" : pathname.startsWith(link.href)) && (
                   <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary rounded-full" />
                 )}
               </Link>
@@ -61,6 +62,7 @@ export default function Navbar() {
             className="md:hidden p-2 text-gray-600 hover:text-secondary transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +87,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`block px-4 py-3 rounded-lg text-[15px] font-medium transition-colors ${
-                  pathname === link.href
+                  (link.href === "/" ? pathname === "/" : pathname.startsWith(link.href))
                     ? "text-primary bg-primary/5"
                     : "text-gray-600 hover:text-secondary hover:bg-gray-50"
                 }`}

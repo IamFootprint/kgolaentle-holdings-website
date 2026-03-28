@@ -80,7 +80,7 @@ export default function Home() {
               { num: "10+", label: "Years Experience" },
               { num: "4", label: "Business Portfolios" },
               { num: "6+", label: "Regions Served" },
-              { num: "100%", label: "Client Commitment" },
+              { num: "24h", label: "Response Guarantee" },
             ].map((stat) => (
               <div key={stat.label} className="flex items-center gap-3">
                 <span className="text-accent font-heading font-bold text-2xl">{stat.num}</span>
@@ -119,7 +119,7 @@ export default function Home() {
                 {[
                   { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", label: "Trust" },
                   { icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z", label: "Collaboration" },
-                  { icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6", label: "Growth" },
+                  { icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z", label: "Continuous Improvement" },
                 ].map((v) => (
                   <div key={v.label} className="text-center">
                     <div className="w-12 h-12 mx-auto mb-3 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 flex items-center justify-center">
@@ -195,7 +195,7 @@ export default function Home() {
                   <p className="text-sm text-gray-500 leading-relaxed">
                     {service.description}
                   </p>
-                  <span className="inline-flex items-center mt-4 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <span aria-hidden="true" className="inline-flex items-center mt-4 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                     Learn More
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -227,9 +227,9 @@ export default function Home() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
-            Ready to experience the
+            Tell us what you need.
             <br />
-            <em className="not-italic text-accent">Kgolaentle</em> difference?
+            <em className="not-italic text-accent">We&apos;ll get back to you</em> within 24 hours.
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto mb-10">
             Whether it&apos;s an event, a delivery, a tech solution, or a beauty

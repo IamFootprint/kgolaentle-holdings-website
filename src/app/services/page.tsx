@@ -36,9 +36,7 @@ export default function ServicesPage() {
           {services.map((service, i) => (
             <div
               key={service.name}
-              className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
-                i % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
+              className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
             >
               {/* Image */}
               <div className={`relative ${i % 2 === 1 ? "lg:order-2" : ""}`}>

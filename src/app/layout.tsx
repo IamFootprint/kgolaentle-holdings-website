@@ -1,8 +1,25 @@
 import type { Metadata } from "next";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 import "./globals.css";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
 
 export const metadataBase = new URL("https://www.kgolaentle.com");
 
@@ -12,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Kgolaentle Holdings",
   },
   description:
-    "Kgolaentle Holdings is a diversified enterprise in the Rustenburg region offering premium rentals, homeware, courier services, and fashion.",
+    "Kgolaentle Holdings is a diversified enterprise in the North West region offering event rentals, courier services, technology solutions, and premium beauty — all built around community.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -25,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kgolaentle Holdings | Your Community Deserves World-Class Service",
     description:
-      "Innovation meets the needs of our people. Premium rentals, homeware, courier services, and fashion in the Rustenburg region.",
+      "Kgolaentle Holdings is a diversified enterprise in the North West region offering event rentals, courier services, technology solutions, and premium beauty — all built around community.",
     url: "https://www.kgolaentle.com",
     siteName: "Kgolaentle Holdings",
     locale: "en_ZA",
@@ -47,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-ZA" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="text-[#1a1a1a] bg-warm-white antialiased">
         <Navbar />
         <main className="pt-20">{children}</main>

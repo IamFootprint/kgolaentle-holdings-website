@@ -9,12 +9,12 @@ const faqs = [
   {
     question: "What services does Kgolaentle Holdings offer?",
     answer:
-      "Kgolaentle Holdings operates four service divisions: Kgolaentle Rentals (VIP mobile toilets and freezers for events), Opulent Homeware (an online homeware store), a Courier Franchise serving the Rustenburg region, and Kgolaentle Collections (our contemporary fashion line).",
+      "Kgolaentle Holdings operates four service divisions: Kgolaentle Rentals (VIP mobile toilets and mobile freezers for events), Courier Services (last-mile delivery across the Rustenburg region), Technology Solutions (digital platform design, development, and AI-enabled workflows for businesses), and Opulent Beauty (premium beauty services and products).",
   },
   {
     question: "Which areas do you service?",
     answer:
-      "Our rental services are available across the North West province and surrounding areas. Our Courier Franchise operates specifically in the Rustenburg region, covering Sun City, Ledig, Mogwase, and surrounding communities. Opulent Homeware and Kgolaentle Collections ship nationwide within South Africa.",
+      "Our rental services are available across the North West province and surrounding areas. Our Courier Franchise operates specifically in the Rustenburg region, covering Sun City, Ledig, Mogwase, Hartebeesfontein, Moruleng, and surrounding communities. Technology Solutions and Opulent Beauty serve clients across South Africa.",
   },
   {
     question: "How do I book VIP mobile toilets or freezers for my event?",
@@ -22,49 +22,49 @@ const faqs = [
       "You can book our rental units by contacting us via phone at +27 (0) 87 093 7316, emailing info@kgolaentle.com, or using the contact form on our website. Please provide your event date, location, expected number of guests, and the type and quantity of units you require. We recommend booking at least two weeks in advance to ensure availability.",
   },
   {
-    question: "How long does courier delivery take in the Rustenburg region?",
+    question: "Can I customise my rental package?",
     answer:
-      "Standard courier deliveries within the Rustenburg region, including Sun City, Ledig, and Mogwase, are typically completed within 1 to 3 business days. Express delivery options may be available depending on the package size and destination. Contact us for specific delivery timelines for your area.",
+      "Yes. All rental packages are tailored to your event's specific requirements. Whether it's a small private function or a large corporate gathering, we can configure the right combination of units, delivery schedules, and maintenance to fit your needs and budget. Contact us for a no-obligation quote.",
   },
   {
-    question: "What is the returns policy for Opulent Homeware products?",
+    question: "How long does courier delivery take in the Rustenburg region?",
     answer:
-      "We offer a 14-day returns policy on Opulent Homeware products. Items must be returned in their original packaging and unused condition. To initiate a return, please email info@kgolaentle.com with your order number and reason for return. Refunds are processed within 7 to 10 business days after we receive and inspect the returned item.",
+      "Standard courier deliveries within the Rustenburg region, including Sun City, Ledig, Mogwase, and Hartebeesfontein, are typically completed within 1 to 3 business days. Express delivery options may be available depending on the package size and destination. Contact us for specific delivery timelines for your area.",
   },
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept EFT (Electronic Funds Transfer), bank deposits, and major credit and debit cards. For rental bookings, a deposit may be required to secure your reservation, with the balance due before the event date. Payment details are provided upon confirmation of your order or booking.",
+      "We accept EFT (Electronic Funds Transfer), bank deposits, and major credit and debit cards. For rental bookings, a deposit may be required to secure your reservation, with the balance due before the event date. Payment details are provided upon confirmation of your booking.",
   },
   {
     question: "What are your operating hours?",
     answer:
-      "Our office operates Monday to Friday from 08:00 to 17:00, and Saturday from 08:00 to 13:00. We are closed on Sundays and public holidays. However, rental deliveries and collections for events may be arranged outside of standard hours by prior agreement.",
+      "Our office operates Monday to Friday from 08:00 to 18:00, and Saturday from 09:00 to 14:00. We are closed on Sundays and public holidays. Rental deliveries and collections for events may be arranged outside of standard hours by prior agreement.",
   },
   {
-    question: "How do I get a quote for your services?",
+    question: "How do I get a quote?",
     answer:
-      "You can request a free, no-obligation quote by calling us at +27 (0) 87 093 7316, emailing info@kgolaentle.com, or filling out the contact form on our website. Please include as much detail as possible about your requirements so we can provide an accurate quote. We typically respond within 24 hours on business days.",
+      "Request a free, no-obligation quote by calling us at +27 (0) 87 093 7316, emailing info@kgolaentle.com, or filling out the contact form on our website. Please include as much detail as possible about your requirements. We typically respond within 24 hours on business days.",
   },
   {
     question: "Are your VIP mobile toilets and freezers available for long-term hire?",
     answer:
-      "Yes, we offer both short-term and long-term rental options. Whether you need units for a single-day event or a multi-week construction project, we can accommodate your needs. Long-term rentals may qualify for discounted rates. Contact us to discuss your specific requirements and receive a tailored quote.",
+      "Yes, we offer both short-term and long-term rental options. Whether you need units for a single-day event or a multi-week project, we can accommodate your needs. Long-term rentals may qualify for discounted rates. Contact us to discuss your specific requirements and receive a tailored quote.",
   },
   {
-    question: "Where can I purchase items from the Kgolaentle Collections fashion line?",
+    question: "What does the Technology Solutions service cover?",
     answer:
-      "Kgolaentle Collections items are available through our website and selected retail partners. New collections are announced on our social media channels, including Facebook and Instagram. Follow us to stay updated on the latest releases, pop-up shops, and exclusive promotions.",
+      "Our Technology Solutions division works with founders, operators, and enterprise teams to design, build, and deploy digital platforms. This includes product strategy, web and mobile application development, AI-enabled workflows, automation, and enterprise architecture. We bring both strategic clarity and hands-on execution to complex technology challenges.",
   },
   {
-    question: "Do you deliver rental units to my location?",
+    question: "Do you deliver and collect rental units?",
     answer:
-      "Yes, we handle the delivery, setup, and collection of all rental units. Delivery is available across the North West province and surrounding areas. Delivery fees may apply depending on your location and the number of units required. We will confirm all delivery details and costs when you receive your quote.",
+      "Yes, we handle the delivery, setup, and collection of all rental units. Delivery is available across the North West province and surrounding areas. Delivery fees may apply depending on your location and the number of units required. All delivery details and costs are confirmed when you receive your quote.",
   },
   {
     question: "How can I contact Kgolaentle Holdings?",
     answer:
-      "You can reach us by phone at +27 (0) 87 093 7316, by email at info@kgolaentle.com, or by visiting our office at Blairgowrie Section, Chaneng, NW 0310, South Africa. You can also connect with us on WhatsApp, Facebook, and Instagram. We aim to respond to all enquiries within 24 hours.",
+      "You can reach us by phone at +27 (0) 87 093 7316, by email at info@kgolaentle.com, or by using the contact form on our website. You can also connect with us on WhatsApp, Facebook, and Instagram. We aim to respond to all enquiries within 24 hours.",
   },
 ];
 
@@ -110,8 +110,8 @@ export default function FAQPage() {
               Still have questions?
             </h2>
             <p className="text-gray-600 mb-6">
-              We&apos;re here to help. Get in touch with our team and we&apos;ll get
-              back to you as soon as possible.
+              We&apos;re here to help. Get in touch and we&apos;ll get back to
+              you within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
