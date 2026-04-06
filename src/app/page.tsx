@@ -41,7 +41,7 @@ export default function Home() {
               every day
             </h1>
             <p className="animate-fade-in-up animate-delay-200 text-lg md:text-xl text-gray-300 max-w-lg mb-10 leading-relaxed">
-              From rentals to technology, courier to beauty — excellence and
+              From rentals to technology, courier to beauty. Excellence and
               innovation, right where you are.
             </p>
             <div className="animate-fade-in-up animate-delay-300 flex flex-col sm:flex-row gap-4">
