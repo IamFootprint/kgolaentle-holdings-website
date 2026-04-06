@@ -39,7 +39,7 @@ function ServiceCTA({ service }: { service: Service }) {
     return (
       <div className="bg-secondary text-white rounded-2xl p-8">
         <h3 className="font-heading text-xl font-semibold mb-3">Book a Consultation</h3>
-        <p className="text-gray-300 text-sm mb-6">Discuss your technology challenges with us. We work with founders, operators, and enterprise teams to deliver real outcomes.</p>
+        <p className="text-gray-300 text-sm mb-6">Discuss your technology challenges with us. We work with founders, operators and enterprise teams to deliver real outcomes.</p>
         <Link href="/contact?service=technology" className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors">
           Book a Consultation
         </Link>
@@ -50,7 +50,7 @@ function ServiceCTA({ service }: { service: Service }) {
     return (
       <div className="bg-secondary text-white rounded-2xl p-8">
         <h3 className="font-heading text-xl font-semibold mb-3">Visit Opulent Beauty</h3>
-        <p className="text-gray-300 text-sm mb-6">Experience Opulent Beauty for yourself — premium services in a welcoming, professional environment.</p>
+        <p className="text-gray-300 text-sm mb-6">Experience Opulent Beauty for yourself. Premium services in a welcoming, professional environment.</p>
         <a href="https://opulentbeauty.co.za" target="_blank" rel="noopener noreferrer"
           className="block w-full text-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg font-medium transition-colors mb-3">
           Visit Opulent Beauty

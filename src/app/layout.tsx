@@ -25,11 +25,11 @@ export const metadataBase = new URL("https://www.kgolaentle.com");
 
 export const metadata: Metadata = {
   title: {
-    default: "Kgolaentle Holdings | Your Community Deserves World-Class Service",
+    default: "Kgolaentle Holdings | Excellence Rooted in Our Community",
     template: "%s | Kgolaentle Holdings",
   },
   description:
-    "Kgolaentle Holdings is a diversified enterprise in the North West region offering event rentals, courier services, technology solutions, and premium beauty — all built around community.",
+    "Kgolaentle Holdings is a diversified enterprise in the North West region offering event rentals, courier services, technology solutions and premium beauty. All built around community.",
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Kgolaentle Holdings | Your Community Deserves World-Class Service",
+    title: "Kgolaentle Holdings | Excellence Rooted in Our Community",
     description:
-      "Kgolaentle Holdings is a diversified enterprise in the North West region offering event rentals, courier services, technology solutions, and premium beauty — all built around community.",
+      "Kgolaentle Holdings is a diversified enterprise in the North West region offering event rentals, courier services, technology solutions and premium beauty. All built around community.",
     url: "https://www.kgolaentle.com",
     siteName: "Kgolaentle Holdings",
     locale: "en_ZA",

@@ -106,12 +106,12 @@ export default function Home() {
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 <strong className="text-secondary">Kgolaentle</strong> was founded
                 on the belief that our country deserves services that reflect its
-                spirit — vibrant, resilient, and world-class.
+                spirit: vibrant, resilient and world-class.
               </p>
               <p className="text-gray-500 leading-relaxed mb-10">
                 For over a decade, we have gone beyond service delivery by bringing
-                care, professionalism, and dignity to every interaction, every
-                delivery, and every event we touch.
+                care, professionalism and dignity to every interaction, every
+                delivery and every event we touch.
               </p>
 
               {/* Values */}
@@ -232,8 +232,8 @@ export default function Home() {
             <em className="not-italic text-accent">We&apos;ll get back to you</em> within 24 hours.
           </h2>
           <p className="text-lg text-white/70 max-w-xl mx-auto mb-10">
-            Whether it&apos;s an event, a delivery, a tech solution, or a beauty
-            experience — we&apos;re here to serve you with excellence.
+            Whether it&apos;s an event, a delivery, a tech solution or a beauty
+            experience. We&apos;re here to serve you with excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

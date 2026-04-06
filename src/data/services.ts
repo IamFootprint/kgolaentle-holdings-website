@@ -52,9 +52,9 @@ export const services: Service[] = [
     slug: "technology",
     name: "Technology Solutions",
     image: "/images/service-technology.jpg",
-    tagline: "Strategy, systems, and execution — built for the real world",
+    tagline: "Strategy, systems and execution. Built for the real world",
     description:
-      "We help founders, operators, and enterprise teams design, build, and deploy digital platforms that work. From product strategy and architecture to AI-enabled workflows and full-stack delivery, we bring clarity and execution to complex technology problems.",
+      "We help founders, operators and enterprise teams design, build and deploy digital platforms that work. From product strategy and architecture to AI-enabled workflows and full-stack delivery, we bring clarity and execution to complex technology problems.",
     features: [
       "Digital platform design and product strategy",
       "Web and mobile application delivery",

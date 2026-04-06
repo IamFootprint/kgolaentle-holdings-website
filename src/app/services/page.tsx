@@ -24,8 +24,8 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Four distinct portfolios united by one promise — delivering quality,
-            innovation, and care to our community.
+            Four distinct portfolios united by one promise: delivering quality,
+            innovation and care to our community.
           </p>
         </div>
       </section>

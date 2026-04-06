@@ -11,7 +11,7 @@ const team = [
     name: "Masego Mafoko",
     role: "CEO & Founder",
     image: "/images/team-ceo.jpg",
-    bio: "With over 10 years in Communications, PR, and Marketing, Masego built Kgolaentle Holdings on a simple belief: her community deserves the same quality of service found anywhere in the world. She also brings extensive experience in running e-commerce businesses. A passionate cross-training athlete and long-distance runner, she channels the same relentless dedication into every venture.",
+    bio: "With over 10 years in Communications, PR and Marketing, Masego built Kgolaentle Holdings on a simple belief: her community deserves the same quality of service found anywhere in the world. She also brings extensive experience in running e-commerce businesses. A passionate cross-training athlete and long-distance runner, she channels the same relentless dedication into every venture.",
     featured: true,
   },
   {
@@ -35,7 +35,7 @@ const team = [
     role: "Mobile Units Caretaker",
     image: "/images/team-kagiso-modise.png",
     bio: "Known as KG, his keen eye for detail and steadfast commitment to maintaining the highest standards ensure all mobile units are pristine and fully functional.",
-    motto: "Clean units, clear conscience — that's the standard I hold myself to.",
+    motto: "Clean units, clear conscience. That's the standard I hold myself to.",
     featured: false,
   },
 ];
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 <p>
                   Kgolaentle was born from a simple observation: the communities of
                   the Rustenburg region deserved the same standard of service as
-                  anywhere else in the country — professional, reliable, and dignified.
+                  anywhere else in the country: professional, reliable and dignified.
                   Masego Mafoko built the company to close that gap, portfolio by portfolio.
                 </p>
                 <p>
