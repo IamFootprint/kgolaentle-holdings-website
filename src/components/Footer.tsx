@@ -20,7 +20,7 @@ export default function Footer() {
               className="h-14 w-auto brightness-0 invert mb-4"
             />
             <p className="text-gray-400 text-sm leading-relaxed">
-              Your community deserves world-class service.
+              Excellence rooted in our community.
             </p>
           </div>
 

@@ -33,12 +33,12 @@ export default function Home() {
               </span>
             </div>
             <h1 className="animate-fade-in-up animate-delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.1] mb-6">
-              Your community
+              We rise with
               <br />
-              deserves{" "}
-              <span className="text-gradient">world-class</span>
+              our{" "}
+              <span className="text-gradient">community</span>
               <br />
-              service
+              every day
             </h1>
             <p className="animate-fade-in-up animate-delay-200 text-lg md:text-xl text-gray-300 max-w-lg mb-10 leading-relaxed">
               From rentals to technology, courier to beauty — excellence and

@@ -34,7 +34,7 @@ export const services: Service[] = [
     slug: "courier",
     name: "Courier Services",
     image: "/images/service-courier.jpg",
-    tagline: "Your community deserves deliveries you can count on",
+    tagline: "Delivering for our community, every single day",
     description:
       "Licensed to serve the Rustenburg Region, our courier franchise delivers reliable and efficient services across Sun City, Ledig, Mogwase, Hartebeesfontein, Moruleng and surrounding areas.",
     features: [
