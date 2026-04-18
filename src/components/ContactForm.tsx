@@ -1,53 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { Suspense, useState } from "react";
+import { Suspense, useActionState } from "react";
 import { useSearchParams } from "next/navigation";
+import { submitContactForm, type ActionResult } from "@/app/contact/actions";
 
-type ActionResult =
-  | { success: true }
-  | { success: false; error: string }
-  | null;
+const initialState: ActionResult | null = null;
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
   const defaultService = searchParams.get("service") ?? "";
 
-  const [state, setState] = useState<ActionResult>(null);
-  const [isPending, setIsPending] = useState(false);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setIsPending(true);
-    setState(null);
-
-    const formData = new FormData(e.currentTarget);
-    const body: Record<string, string> = {};
-    formData.forEach((value, key) => {
-      body[key] = value as string;
-    });
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-      });
-      const data = await res.json();
-      if (res.ok && data.success) {
-        setState({ success: true });
-      } else {
-        setState({
-          success: false,
-          error: data.error ?? "Something went wrong. Please try again.",
-        });
-      }
-    } catch {
-      setState({ success: false, error: "Network error. Please try again." });
-    } finally {
-      setIsPending(false);
-    }
-  }
+  const [state, formAction, isPending] = useActionState(
+    submitContactForm,
+    initialState
+  );
 
   if (state?.success) {
     return (
@@ -98,7 +65,7 @@ function ContactFormContent() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form action={formAction} className="space-y-5">
         {/* Honeypot — hidden from real users, filled by bots */}
         <div className="absolute opacity-0 pointer-events-none -z-10 w-0 h-0 overflow-hidden" aria-hidden="true">
           <input type="text" name="website" autoComplete="off" tabIndex={-1} />
