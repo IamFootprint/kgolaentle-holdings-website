@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 
+export const dynamic = "force-static";
+
 const baseUrl = "https://www.kgolaentle.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
