@@ -55,8 +55,8 @@
 - [ ] Hero image loads with `priority` (no LCP warning in DevTools)
 - [ ] No console errors in browser DevTools
 
-## Vercel
-- [ ] Preview deployment URL loads correctly
-- [ ] Production deployment URL loads correctly
-- [ ] SSL certificate active (HTTPS green padlock)
-- [ ] www.kgolaentle.com resolves to Vercel
+## Cloudflare Workers
+- [ ] Workers.dev URL loads correctly (https://kgolaentle-holdings-website.lebogang.workers.dev)
+- [ ] Production URL loads correctly (https://kgolaentle.com)
+- [ ] SSL certificate active (HTTPS green padlock — Cloudflare-managed)
+- [ ] www.kgolaentle.com resolves correctly
