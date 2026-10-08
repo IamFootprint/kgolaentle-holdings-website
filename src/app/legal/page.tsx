@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_HREF,
+  INFORMATION_OFFICER_EMAIL,
+  INFORMATION_OFFICER_NAME,
+  LEGAL_NAME,
+  REGISTERED_ADDRESS,
+  REGISTRATION_NUMBER,
+  WEBSITE_LABEL,
+  WEBSITE_URL,
+  portfolios,
+} from "@/data/legal";
 
 export const metadata: Metadata = {
   title: "Legal Notice",
@@ -21,8 +34,8 @@ export default function LegalNoticePage() {
             Legal Notice
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Important legal information regarding Kgolaentle Holdings and the
-            use of this website.
+            Important legal information about {LEGAL_NAME} and the use of this
+            website.
           </p>
         </div>
       </section>
@@ -39,41 +52,49 @@ export default function LegalNoticePage() {
           <div className="bg-gray-50 rounded-xl p-6 mb-6">
             <ul className="space-y-3 text-gray-600">
               <li>
-                <strong>Company Name:</strong> Kgolaentle Holdings
+                <strong>Company Name:</strong> {LEGAL_NAME}
               </li>
               <li>
-                <strong>Registration Number:</strong> [Registration number to
-                be confirmed]
+                <strong>Registration Number:</strong> {REGISTRATION_NUMBER}
               </li>
               <li>
-                <strong>Registered Address:</strong> Blairgowrie Section,
-                Chaneng, NW 0310, South Africa
+                <strong>Registered Address:</strong> {REGISTERED_ADDRESS}
+              </li>
+              <li>
+                <strong>Information Officer:</strong>{" "}
+                {INFORMATION_OFFICER_NAME},{" "}
+                <a
+                  href={`mailto:${INFORMATION_OFFICER_EMAIL}`}
+                  className="text-accent hover:underline"
+                >
+                  {INFORMATION_OFFICER_EMAIL}
+                </a>
               </li>
               <li>
                 <strong>Email:</strong>{" "}
                 <a
-                  href="mailto:info@kgolaentle.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="text-accent hover:underline"
                 >
-                  info@kgolaentle.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li>
                 <strong>Phone:</strong>{" "}
                 <a
-                  href="tel:+27870937316"
+                  href={CONTACT_PHONE_HREF}
                   className="text-accent hover:underline"
                 >
-                  +27 (0) 87 093 7316
+                  {CONTACT_PHONE}
                 </a>
               </li>
               <li>
                 <strong>Website:</strong>{" "}
                 <a
-                  href="https://www.kgolaentle.com"
+                  href={WEBSITE_URL}
                   className="text-accent hover:underline"
                 >
-                  www.kgolaentle.com
+                  {WEBSITE_LABEL}
                 </a>
               </li>
             </ul>
@@ -83,27 +104,14 @@ export default function LegalNoticePage() {
             2. Business Activities
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Kgolaentle Holdings is a multi-service enterprise operating the
-            following divisions:
+            Kgolaentle Holdings runs four portfolios:
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
-            <li>
-              <strong>Kgolaentle Rentals</strong> &mdash; VIP mobile toilet and
-              freezer rental services for events and functions.
-            </li>
-            <li>
-              <strong>Opulent Homeware</strong> &mdash; Online retail of
-              curated homeware products.
-            </li>
-            <li>
-              <strong>Courier Franchise</strong> &mdash; Courier and delivery
-              services in the Rustenburg region, including Sun City, Ledig,
-              Mogwase, and surrounding areas.
-            </li>
-            <li>
-              <strong>Kgolaentle Collections</strong> &mdash; Contemporary
-              fashion line offering clothing and accessories.
-            </li>
+            {portfolios.map((portfolio) => (
+              <li key={portfolio.slug}>
+                <strong>{portfolio.name}:</strong> {portfolio.sentence}
+              </li>
+            ))}
           </ul>
 
           <h2 className="text-2xl font-heading font-bold text-secondary mt-12 mb-4">
@@ -111,17 +119,17 @@ export default function LegalNoticePage() {
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
             All intellectual property rights in relation to this website and
-            its content belong to Kgolaentle Holdings unless otherwise stated.
-            This includes, but is not limited to:
+            its content belong to {LEGAL_NAME} unless otherwise stated. This
+            includes, but is not limited to:
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
-            <li>The Kgolaentle Holdings name, logo, and brand identity.</li>
-            <li>All text, graphics, photographs, images, and visual elements.</li>
-            <li>Website design, layout, and source code.</li>
-            <li>Product names, service marks, and trade names associated with our divisions.</li>
+            <li>The Kgolaentle Holdings name, logo and brand identity.</li>
+            <li>All text, graphics, photographs, images and visual elements.</li>
+            <li>Website design, layout and source code.</li>
+            <li>Product names, service marks and trade names associated with our portfolios.</li>
           </ul>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Unauthorised use, reproduction, modification, or distribution of
+            Unauthorised use, reproduction, modification or distribution of
             any content from this website is strictly prohibited and may result
             in legal action.
           </p>
@@ -132,11 +140,11 @@ export default function LegalNoticePage() {
           <p className="text-gray-600 leading-relaxed mb-4">
             The information provided on this website is for general
             informational purposes only. While we strive to ensure the accuracy
-            and completeness of all information, Kgolaentle Holdings makes no
+            and completeness of all information, {LEGAL_NAME} makes no
             warranties or representations, express or implied, regarding:
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
-            <li>The accuracy, reliability, or completeness of any information on this website.</li>
+            <li>The accuracy, reliability or completeness of any information on this website.</li>
             <li>The availability or uninterrupted operation of this website.</li>
             <li>The suitability of our services for any particular purpose.</li>
             <li>The results that may be obtained from the use of this website or our services.</li>
@@ -150,10 +158,10 @@ export default function LegalNoticePage() {
             5. Limitation of Liability
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            To the fullest extent permitted by South African law, Kgolaentle
-            Holdings, its directors, employees, agents, and affiliates shall
-            not be liable for any direct, indirect, incidental, consequential,
-            or special damages arising from or in connection with:
+            To the fullest extent permitted by South African law, {LEGAL_NAME},
+            its directors, employees, agents and affiliates shall not be liable
+            for any direct, indirect, incidental, consequential or special
+            damages arising from or in connection with:
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
             <li>Your access to or use of this website.</li>
@@ -168,9 +176,9 @@ export default function LegalNoticePage() {
           <p className="text-gray-600 leading-relaxed mb-4">
             This website may contain links to external websites. These links
             are provided for convenience and informational purposes only.
-            Kgolaentle Holdings does not endorse, control, or assume
-            responsibility for the content, privacy policies, or practices of
-            any third-party websites.
+            {LEGAL_NAME} does not endorse, control or assume responsibility for
+            the content, privacy policies or practices of any third-party
+            websites.
           </p>
 
           <h2 className="text-2xl font-heading font-bold text-secondary mt-12 mb-4">
@@ -179,9 +187,9 @@ export default function LegalNoticePage() {
           <p className="text-gray-600 leading-relaxed mb-4">
             Your use of this website is also governed by our{" "}
             <Link href="/privacy" className="text-accent hover:underline">
-              Privacy Policy
+              Privacy Notice
             </Link>
-            , which explains how we collect, use, and protect your personal
+            , which explains how we collect, use and protect your personal
             information in accordance with the Protection of Personal
             Information Act (POPIA) of South Africa.
           </p>
@@ -208,24 +216,23 @@ export default function LegalNoticePage() {
             <li>
               <strong>Email:</strong>{" "}
               <a
-                href="mailto:info@kgolaentle.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="text-accent hover:underline"
               >
-                info@kgolaentle.com
+                {CONTACT_EMAIL}
               </a>
             </li>
             <li>
               <strong>Phone:</strong>{" "}
               <a
-                href="tel:+27870937316"
+                href={CONTACT_PHONE_HREF}
                 className="text-accent hover:underline"
               >
-                +27 (0) 87 093 7316
+                {CONTACT_PHONE}
               </a>
             </li>
             <li>
-              <strong>Address:</strong> Blairgowrie Section, Chaneng, NW 0310,
-              South Africa
+              <strong>Address:</strong> {REGISTERED_ADDRESS}
             </li>
           </ul>
 
