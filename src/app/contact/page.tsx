@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { ADDRESS_LINES } from "@/data/legal";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -44,9 +45,9 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-heading font-bold text-secondary text-lg mb-1">Address</h3>
                   <p className="text-gray-500 leading-relaxed">
-                    Blairgowrie Section, Chaneng<br />
-                    North West, 0310<br />
-                    South Africa
+                    {ADDRESS_LINES[0]}<br />
+                    {ADDRESS_LINES[1]}<br />
+                    {ADDRESS_LINES[2]}
                   </p>
                 </div>
               </div>

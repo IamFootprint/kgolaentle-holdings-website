@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/data/services";
+import {
+  ADDRESS,
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_HREF,
+  LEGAL_NAME,
+  REGISTRATION_NUMBER,
+} from "@/data/legal";
 
 export default function Footer() {
   return (
@@ -75,7 +83,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { href: "/privacy", label: "Privacy Policy" },
+                { href: "/privacy", label: "Privacy Notice" },
                 { href: "/terms", label: "Terms of Use" },
                 { href: "/legal", label: "Legal Notice" },
               ].map((link) => (
@@ -97,16 +105,20 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li>Blairgowrie Section, Chaneng</li>
-              <li>NW 0310, South Africa</li>
               <li>
-                <a href="tel:+27870937316" className="hover:text-accent transition-colors">
-                  +27 (0) 87 093 7316
+                {ADDRESS.street}, {ADDRESS.area}
+              </li>
+              <li>
+                {ADDRESS.city}, {ADDRESS.postalCode}, {ADDRESS.country}
+              </li>
+              <li>
+                <a href={CONTACT_PHONE_HREF} className="hover:text-accent transition-colors">
+                  {CONTACT_PHONE}
                 </a>
               </li>
               <li>
-                <a href="mailto:info@kgolaentle.com" className="hover:text-accent transition-colors">
-                  info@kgolaentle.com
+                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-accent transition-colors">
+                  {CONTACT_EMAIL}
                 </a>
               </li>
             </ul>
@@ -153,7 +165,8 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-xs">
-            &copy; {new Date().getFullYear()} Kgolaentle Holdings. All rights reserved.
+            &copy; {new Date().getFullYear()} {LEGAL_NAME}. Registration number{" "}
+            {REGISTRATION_NUMBER}. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs">
             Crafted with care in the North West, South Africa
