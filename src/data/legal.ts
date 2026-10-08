@@ -1,7 +1,8 @@
 import { services, type Service } from "@/data/services";
 
-// Set this to the adoption date of the Privacy Notice before deployment.
-export const LEGAL_EFFECTIVE_DATE = "To be confirmed";
+// The date the Privacy Notice was published. Change it with LEGAL_VERSION
+// whenever the notice changes.
+export const LEGAL_EFFECTIVE_DATE = "8 October 2026";
 export const LEGAL_VERSION = "1.0";
 
 export const LEGAL_NAME = "Kgolaentle Holdings (Pty) Ltd";
