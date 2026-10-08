@@ -8,7 +8,6 @@ import {
   LEGAL_EFFECTIVE_DATE,
   LEGAL_NAME,
   LEGAL_VERSION,
-  POSTAL_ADDRESS,
   REGISTRATION_NUMBER,
   WEBSITE_LABEL,
   WEBSITE_URL,
@@ -57,8 +56,8 @@ export default function PrivacyNoticePage() {
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
             We are {LEGAL_NAME}, registration number {REGISTRATION_NUMBER}, a private company in South Africa. We run four portfolios:{" "}
-            {portfoliosInline}. Our address is {ADDRESS.street}, {ADDRESS.area},{" "}
-            {ADDRESS.city}, {ADDRESS.postalCode}, {ADDRESS.province}. Our postal address is {POSTAL_ADDRESS}.
+            {portfoliosInline}. Our physical and postal address is {ADDRESS.street}, {ADDRESS.area},{" "}
+            {ADDRESS.city}, {ADDRESS.postalCode}, {ADDRESS.province}.
           </p>
           <h2 className="text-2xl font-heading font-bold text-secondary mt-12 mb-4">
             2. Our Information Officer

@@ -24,8 +24,6 @@ export const ADDRESS_LINES = [
 
 export const REGISTERED_ADDRESS = ADDRESS_LINES.join(", ");
 
-export const POSTAL_ADDRESS = "PO Box 5075, Weltevredenpark, 1715";
-
 export const INFORMATION_OFFICER_NAME = "Masego Mafoko";
 export const INFORMATION_OFFICER_FULL_NAME = "Emma Masego Mafoko";
 export const INFORMATION_OFFICER_EMAIL = "masego@kgolaentle.com";
