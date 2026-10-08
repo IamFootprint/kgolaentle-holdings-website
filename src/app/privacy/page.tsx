@@ -79,7 +79,7 @@ export default function PrivacyNoticePage() {
             <a href="tel:+27824978565" className="text-accent hover:underline">
               082 497 8565
             </a>
-            . You may also write to either address above.
+            . You may also write to the address above.
           </p>
           <h2 className="text-2xl font-heading font-bold text-secondary mt-12 mb-4">
             3. What we collect
