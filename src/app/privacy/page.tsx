@@ -195,7 +195,7 @@ export default function PrivacyNoticePage() {
           </p>
           <h2
             id="data-deletion"
-            className="text-2xl font-heading font-bold text-secondary mt-12 mb-4"
+            className="scroll-mt-28 text-2xl font-heading font-bold text-secondary mt-12 mb-4"
           >
             11. How to ask us to delete your information
           </h2>
