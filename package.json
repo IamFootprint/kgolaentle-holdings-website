@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
@@ -26,6 +27,8 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.1.6",
     "wrangler": "^4.83.0"
   }
 }

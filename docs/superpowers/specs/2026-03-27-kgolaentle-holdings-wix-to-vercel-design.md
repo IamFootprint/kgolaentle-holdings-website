@@ -196,7 +196,7 @@ docs/
 ## 9. QA Checklist (pre-launch)
 
 - [ ] `next build` exits cleanly (0 errors, 0 TS errors)
-- [ ] `next lint` passes
+- [ ] `npm run lint` passes
 - [ ] All pages load on mobile (320px), tablet (768px), desktop (1280px)
 - [ ] Hero image renders correctly with priority loading
 - [ ] All nav links work, active state highlights correctly
